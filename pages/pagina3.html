@@ -7,11 +7,10 @@
     <title>Fundación Kinal - Educación Técnica en Guatemala</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/style/pagina3.css">
-    
+
 </head>
 
 <body>
-    <!-- Header superior con contacto -->
     <div class="top-header">
         <div class="container">
             <div class="top-header-content">
@@ -30,16 +29,13 @@
         </div>
     </div>
 
-    <!-- Header principal con logo y navegación -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
                 <div class="logo-container">
 
-                    <!-- Logo de Kinal (representado con color ya que no tengo la imagen) -->
                     <div class="logo">
-                        <img src="/image/logo.png"
-                            alt="Logo Kinal" style="height: 70px; width: auto;">
+                        <img src="/image/logo.png" alt="Logo Kinal" style="height: 70px; width: auto;">
                     </div>
 
                     <div class="logo-text">
@@ -48,23 +44,22 @@
                     </div>
                 </div>
 
-                <!-- Menú de navegación principal -->
                 <nav class="main-nav" id="mainNav">
                     <ul>
                         <li><a href="#" class="active">INICIO</a></li>
                         <li>
                             <a href="#">QUIÉNES SOMOS <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
-                                
-                               
-                               
-                                
+
+
+
+
                             </ul>
                         </li>
                         <li>
                             <a href="#">PROGRAMAS <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
-                                
+
                             </ul>
                         </li>
                         <li><a href="#">NOTICIAS</a></li>
@@ -73,7 +68,6 @@
                     </ul>
                 </nav>
 
-                <!-- Botón menú móvil -->
                 <div class="mobile-menu-toggle" id="mobileMenuToggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -81,29 +75,25 @@
         </div>
     </header>
 
-    <!-- Overlay para menú móvil -->
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Sección Hero MODIFICADA -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <!-- Logo en el hero -->
                 <div class="hero-logo">
-                    
-                    </div>
-                </div>
 
-                <h1>Formando jóvenes para construir</h1>
-                <h2>un mejor futuro</h2>
-                <p>En Fundación Kinal brindamos educación técnica de calidad a jóvenes guatemaltecos de escasos
-                    recursos, preparándolos para el mundo laboral y contribuyendo a su desarrollo integral.</p>
-                <a href="#" class="cta-button">CONOCE NUESTROS PROGRAMAS</a>
+                </div>
             </div>
+
+            <h1>Formando jóvenes para construir</h1>
+            <h2>un mejor futuro</h2>
+            <p>En Fundación Kinal brindamos educación técnica de calidad a jóvenes guatemaltecos de escasos
+                recursos, preparándolos para el mundo laboral y contribuyendo a su desarrollo integral.</p>
+            <a href="#" class="cta-button">CONOCE NUESTROS PROGRAMAS</a>
+        </div>
         </div>
     </section>
 
-    <!-- Sección de Programas -->
     <section class="programs-section">
         <div class="container">
             <h2 class="section-title">Nuestros Programas Educativos</h2>
@@ -158,7 +148,6 @@
         </div>
     </section>
 
-    <!-- Sección de Noticias -->
     <section class="news-section">
         <div class="container">
             <h2 class="section-title">Noticias y Eventos</h2>
@@ -211,7 +200,6 @@
         </div>
     </section>
 
-    <!-- Sección de Estadísticas -->
     <section class="stats-section">
         <div class="container">
             <h2 class="section-title" style="color: white;">Kinal en Números</h2>
@@ -243,7 +231,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -303,18 +290,15 @@
     </footer>
 
     <script>
-        // baclog para las tres paginas web
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuToggle = document.getElementById('mobileMenuToggle');
             const mainNav = document.getElementById('mainNav');
             const navOverlay = document.getElementById('navOverlay');
 
-            // Toggle menú móvil
             mobileMenuToggle.addEventListener('click', function () {
                 mainNav.classList.toggle('active');
                 navOverlay.classList.toggle('active');
 
-                // Cambiar ícono
                 const icon = mobileMenuToggle.querySelector('i');
                 if (mainNav.classList.contains('active')) {
                     icon.classList.remove('fa-bars');
@@ -325,18 +309,16 @@
                 }
             });
 
-            // Cerrar menú al hacer clic en el overlay
             navOverlay.addEventListener('click', function () {
                 mainNav.classList.remove('active');
                 navOverlay.classList.remove('active');
 
-                // Restaurar ícono
+
                 const icon = mobileMenuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             });
 
-            // Manejar submenús en móvil
             const navItemsWithSubmenu = document.querySelectorAll('.main-nav li:has(.submenu) > a');
             navItemsWithSubmenu.forEach(item => {
                 item.addEventListener('click', function (e) {
@@ -345,7 +327,7 @@
                         const submenu = this.nextElementSibling;
                         submenu.classList.toggle('active');
 
-                        // Cambiar ícono
+
                         const icon = this.querySelector('i');
                         if (submenu.classList.contains('active')) {
                             icon.classList.remove('fa-chevron-down');
